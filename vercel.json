@@ -1,23 +1,23 @@
 {
     "version": 2,
-    "framework": "laravel",
+    "framework": null,
     "functions": {
         "api/index.php": { "runtime": "vercel-php@0.7.3" }
     },
     "routes": [
         {
-            "src": "/images/(.*)",
-            "dest": "/public/images/$1"
-        },
-        {
             "src": "/(.*)",
             "dest": "/api/index.php"
+        },
+        {
+            "src": "/images/(.*)",
+            "dest": "/public/images/$1"
         }
     ],
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "true",
-        "APP_URL": "https://portofolio-phi-navy.vercel.app",
+        "APP_URL": "https://portfolio-phi-navy.vercel.app",
         "APP_KEY": "base64:CW4DO9QvhGzxQmp4QO4vBxpCuLS2M5lYVtjoTlENBY8=",
 
         "APP_CONFIG_CACHE": "/tmp/config.php",
