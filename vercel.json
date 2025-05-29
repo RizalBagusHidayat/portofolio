@@ -1,14 +1,26 @@
 {
     "version": 2,
     "framework": null,
-    "functions": {
-        "api/index.php": { "runtime": "vercel-php@0.7.3" }
-    },
+    "builds": [
+        {
+            "src": "public//*",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "api/index.php",
+            "use": "vercel-php@0.7.3"
+        }
+    ],
     "routes": [
         {
             "src": "/images/(.*)",
             "dest": "/public/images/$1"
         },
+        {
+            "src": "/favicon.ico",
+            "dest": "/public/favicon.ico"
+        },
+
         {
             "src": "/(.*)",
             "dest": "/api/index.php"
@@ -17,7 +29,7 @@
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "true",
-        "APP_URL": "https://portofolio-phi-navy.vercel.app",
+        "APP_URL": "https://portfolio-phi-navy.vercel.app",
         "APP_KEY": "base64:CW4DO9QvhGzxQmp4QO4vBxpCuLS2M5lYVtjoTlENBY8=",
 
         "APP_CONFIG_CACHE": "/tmp/config.php",
