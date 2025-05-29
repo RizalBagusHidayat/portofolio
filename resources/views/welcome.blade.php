@@ -39,7 +39,7 @@
             animation-timing-function: ease-out;
         }
 
-        <style>@keyframes marquee {
+        @keyframes marquee {
             0% {
                 transform: translateX(0);
             }
