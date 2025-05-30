@@ -5,9 +5,6 @@
     <x-landing-page.about />
 
     @push('scripts')
-
-            });
-        </script>
         <script>
             // Fungsi mengetik satu kali untuk teks intro
             function typeText(element, text, speed = 100) {

@@ -1,12 +1,12 @@
-<section class="max-w-7xl mx-auto flex gap-8 lg:gap-0 flex-col lg:flex-row items-center px-6 py-16 relative z-10"
+<section class="max-w-7xl mx-auto flex gap-8 lg:gap-0 flex-col lg:flex-row items-center px-6 py-12 pt-16 relative z-10"
     data-aos="fade-down" data-aos-delay="300" data-aos-duration="800">
-    <div class="flex-1 flex items-center lg:items-start flex-col">
+    <div class="flex-1 flex items-center lg:items-start flex-col text-center lg:text-left">
         <!-- Baris pertama: Hello -->
         <h5 id="hello" class="text-md lg:text-lg font-normal mb-2"></h5>
         <!-- Baris kedua: My Name is  Rizal Bagus Hidayat -->
         <h6 id="intro" class="text-3xl mb-1">
-            <span id="intro-text" class=""></span>
-            <span id="intro-name" class="font-bold"></span>
+            <span id="intro-text" class="text-xl"></span>
+            <span id="intro-name" class="text-2xl font-bold"></span>
         </h6>
         <!-- Baris ketiga: looping teks -->
         <h3 class="mb-6">

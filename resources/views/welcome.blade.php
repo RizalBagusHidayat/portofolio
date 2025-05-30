@@ -46,7 +46,7 @@
 
     <!-- HERO SECTION -->
     <x-landing-page.hero />
-    
+
     <!-- TECH STACK -->
     <x-landing-page.tech />
 
@@ -116,6 +116,7 @@
 
     @push('scripts')
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script>
             AOS.init({
 
@@ -204,25 +205,25 @@
                     title: "Lumajang Tulen",
                     description: "Platform e-commerce resmi untuk mendukung UMKM Kabupaten Lumajang.",
                     category: "web",
-                    image: "https://storage.googleapis.com/a1aa/image/a6d1099f-75f3-4979-9efe-24bda220bfd2.jpg"
+                    image: "{{ asset('images/projects/lumajang-tulen.png') }}"
                 },
                 {
                     title: "SSJ (Sapi Sehat Jember)",
                     description: "Website monitoring kesehatan sapi untuk Dinas Peternakan Jember.",
                     category: "web",
-                    image: "https://storage.googleapis.com/a1aa/image/44d52cfc-dbc8-463b-d279-d4ec05d15205.jpg"
+                    image: "{{ asset('images/projects/ssj.png') }}"
                 },
                 {
                     title: "Safe Vault",
                     description: "Password manager berbasis web dengan autentikasi Google dan PIN.",
                     category: "web",
-                    image: "https://storage.googleapis.com/a1aa/image/1fb6b2db-f6ba-4122-528f-4b1d038c3fc5.jpg"
+                    image: "{{ asset('images/projects/safe-vault.png') }}"
                 },
                 {
                     title: "J-Layer",
                     description: "Website pengajuan pakan ayam terintegrasi untuk peternak.",
                     category: "web",
-                    image: "https://storage.googleapis.com/a1aa/image/1a68d18c-1d8b-42c4-3241-b116ef660285.jpg"
+                    image: "{{ asset('images/projects/j-layer.png') }}"
                 }
             ];
 
@@ -254,7 +255,7 @@
                     <div class="p-4">
                         <h5 class="font-semibold mb-1">${p.title}</h5>
                         <p class="text-sm text-gray-600 mb-3">${p.description}</p>
-                        <a href="#" class="inline-block bg-[#192C50] text-white text-xs font-semibold px-3 py-1 rounded hover:bg-[#145374] transition">View Project</a>
+                        <a href="#" class="button-view-project inline-block bg-[#192C50] text-white text-xs font-semibold px-3 py-1 rounded hover:bg-[#0f1c35] hover:scale-110 transition">View Project</a>
                     </div>
                 `;
                     grid.appendChild(card);
@@ -272,6 +273,20 @@
             });
 
             renderProjects('web');
+        </script>
+        <script>
+            // Contoh penggunaan SweetAlert2
+            document.querySelectorAll('.button-view-project').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    Swal.fire({
+                        title: 'Project Doesnt Exist',
+                        text: 'This project is not added yet available yet.',
+                        icon: 'info',
+                        confirmButtonText: 'Close'
+                    });
+                });
+            });
         </script>
     @endpush
 </x-app>
